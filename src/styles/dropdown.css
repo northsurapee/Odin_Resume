@@ -39,11 +39,36 @@ button.open-dropdown h2 {
     display: none;
 }
 
-button.create-form {
+button.create-form,
+button.delete,
+button.save {
     align-self: center;
     margin-bottom: 20px ;
     padding: 5px;
     background-color: white;
     border-radius: 5px;
     border: 1px solid #0e374e;
+}
+
+.form-container {
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 5px solid #f3f4f6;
+}
+
+.form-button {
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+    border-left: none;
+    border-right: none;
+    border-top: 5px solid #f3f4f6;
+    border-bottom: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }

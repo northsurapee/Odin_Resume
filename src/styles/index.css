@@ -31,6 +31,11 @@ body {
 
 button {
   font-family: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.5;
 }
 
 h1,
