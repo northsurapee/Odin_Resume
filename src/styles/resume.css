@@ -1,0 +1,48 @@
+/* CUSTOM VARIABLES */
+:root {
+    --resume-header: #0e374e;
+    --resume-font: "NotoSans", sans-serif;
+    --resume-bold: "NotoSans-Bold", sans-serif;
+    --section-resume-bg: rgba(14, 55, 78, 0.07);
+}
+
+/* WHOLE RESUME */
+
+.resume-container {
+    width: 21cm;
+    height: 29.7cm;
+    box-shadow: rgba(50, 50, 93, 0.1) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.25) 0px 8px 16px -8px;
+}
+
+.resume {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+}
+
+/* PERSONAL */
+.personal-info {
+    background-color: var(--resume-header);
+    color: white;
+    width: 100%;
+    padding: 36px 24px;
+  }
+  
+.resume-name {
+    text-align: center;
+}
+  
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+  
+.contact-info div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
