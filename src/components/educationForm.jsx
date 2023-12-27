@@ -1,23 +1,17 @@
 /* eslint-disable react/prop-types */
 import {useState} from 'react';
 import InputGroup from './inputGroup';
-import "../styles/personalForm.css"
+import "../styles/form.css"
 
-export default function EducationForm({onFormChange}) {
-    const [formData, setFormData] = useState({
-        school: "Chulalongkorn University",
-        degree: "Bachelors in Computer Engineering",
-        startDate: "08/2020",
-        endDate: "08/2024",
-        location: "Bangkok, Thailand"
-    });
+export default function EducationForm({initialData, onFormChange}) {
+    const [formData, setFormData] = useState(initialData);
 
     function handleInputChange(e) {
         const { name, value } = e.target;
         // Update local state
-        setFormData((prevData) => ({ ...prevData, [name]: value }));
+        setFormData({ ...formData, [name]: value });
         // Notify parent or other components about the change
-        onFormChange((prevData) => ({ ...prevData, [name]: value }));
+        onFormChange({ ...formData, [name]: value });
     }
     
     return (

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import {useState} from 'react';
 import InputGroup from './inputGroup';
-import "../styles/personalForm.css"
+import "../styles/form.css"
 
 export default function ExperienceForm({onFormChange}) {
     const [formData, setFormData] = useState({

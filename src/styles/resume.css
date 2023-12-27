@@ -21,6 +21,30 @@
     width: 100%;
 }
 
+.resume h1,
+.resume h2,
+.resume h3 {
+  font-family: var(--resume-bold);
+  font-weight: bold;
+}
+
+.header-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 13px;
+  text-align: center;
+  border-radius: 2px;
+  padding: 4px 0;
+  background-color: var(--section-resume-bg);
+  color: var(--resume-accent);
+}
+
+.resume-section {
+    padding: 0 56px;
+    margin-top: 40px;
+  }
+
 /* PERSONAL */
 .personal-info {
     background-color: var(--resume-header);
@@ -46,3 +70,24 @@
     flex-wrap: wrap;
     gap: 6px;
 }
+
+/* EDUCATION */
+.education-info {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 24px;
+  }
+  
+  .education-info-group {
+    min-width: 150px;
+  }
+  
+  .education-info-schoolName {
+    font-family: var(--resume-bold);
+    font-weight: bold;
+  }
+  
+  .education-info-degree {
+    font-size: 15px;
+  }
+

@@ -14,12 +14,11 @@ export default function PersonalForm({onFormChange}) {
     function handleInputChange(e) {
         const { name, value } = e.target;
         // Update local state
-        setFormData((prevData) => ({ ...prevData, [name]: value }));
+        setFormData({ ...formData, [name]: value });
         // Notify parent or other components about the change
-        onFormChange((prevData) => ({ ...prevData, [name]: value }));
+        onFormChange({ ...formData, [name]: value });
     }
     
-
     return (
         <form className="personal-form">
             <h2>Personal Details</h2>
