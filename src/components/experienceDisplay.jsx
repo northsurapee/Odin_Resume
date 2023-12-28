@@ -16,13 +16,9 @@ export default function ExperienceDisplay({ formDataList }) {
             <p>{formData.location}</p>
           </div>
           <div className="experience-info-group">
-            <p className="experience-info-companyName">
-              {formData.companyName}
-            </p>
+            <p className="experience-info-companyName">{formData.companyName}</p>
             <p className="experience-info-positionTitle">{formData.position}</p>
-            <p className="experience-info-description">
-              {formData.description}
-            </p>
+            <p className="experience-info-description">{formData.description}</p>
           </div>
         </div>
       ))}
@@ -30,14 +26,3 @@ export default function ExperienceDisplay({ formDataList }) {
   );
 }
 
-// const [expList, setExpList] = useState([
-//     {
-//       companyName: "LINEMAN WONGNAI",
-//       position: "Full Stack Developer Intern",
-//       startDate: "06/2023",
-//       endDate: "08/2023",
-//       location: "Bangkok, Thailand",
-//       description:
-//         "Develop new features for the corporate web using React and contribute to a new product in Dime app using Go",
-//     },
-//   ]);
