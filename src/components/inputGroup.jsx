@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "../styles/InputGroup.css";
+import "../styles/inputGroup.css";
 
 export default function InputGroup({
   id,
