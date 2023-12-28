@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import "../styles/resume.css";
 
-export default function PersonalDisplay({formData}) {
+export default function PersonalDisplay({ formData }) {
   return (
     <div className="personal-info">
       <h1 className="resume-name">{formData.fullName}</h1>

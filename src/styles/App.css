@@ -1,18 +1,18 @@
 .app {
-    display: flex;
-    margin: auto;
-    width: 100%;
-    padding: 32px 24px;
-    gap: 24px;
-    max-width: 1500px;
+  display: flex;
+  margin: auto;
+  width: 100%;
+  padding: 32px 24px;
+  gap: 24px;
+  max-width: 1500px;
 
-    justify-content: center;
-  }
+  justify-content: center;
+}
 
 .menu-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    /* flex-grow: 999; */
-    gap: 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* flex-grow: 999; */
+  gap: 28px;
 }

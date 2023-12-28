@@ -1,24 +1,25 @@
 /* CUSTOM VARIABLES */
 :root {
-    --resume-header: #0e374e;
-    --resume-font: "NotoSans", sans-serif;
-    --resume-bold: "NotoSans-Bold", sans-serif;
-    --section-resume-bg: rgba(14, 55, 78, 0.07);
+  --resume-header: #0e374e;
+  --resume-font: "NotoSans", sans-serif;
+  --resume-bold: "NotoSans-Bold", sans-serif;
+  --section-resume-bg: rgba(14, 55, 78, 0.07);
 }
 
 /* WHOLE RESUME */
 
 .resume-container {
-    width: 21cm;
-    height: 29.7cm;
-    box-shadow: rgba(50, 50, 93, 0.1) 0px 13px 27px -5px,
-      rgba(0, 0, 0, 0.25) 0px 8px 16px -8px;
+  width: 21cm;
+  height: 29.7cm;
+  box-shadow:
+    rgba(50, 50, 93, 0.1) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.25) 0px 8px 16px -8px;
 }
 
 .resume {
-    background-color: white;
-    height: 100%;
-    width: 100%;
+  background-color: white;
+  height: 100%;
+  width: 100%;
 }
 
 .resume h1,
@@ -41,53 +42,78 @@
 }
 
 .resume-section {
-    padding: 0 56px;
-    margin-top: 40px;
-  }
+  padding: 0 56px;
+  margin-top: 40px;
+}
 
 /* PERSONAL */
 .personal-info {
-    background-color: var(--resume-header);
-    color: white;
-    width: 100%;
-    padding: 36px 24px;
-  }
-  
+  background-color: var(--resume-header);
+  color: white;
+  width: 100%;
+  padding: 36px 24px;
+}
+
 .resume-name {
-    text-align: center;
+  text-align: center;
 }
-  
+
 .contact-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
-  
+
 .contact-info div {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 6px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
 /* EDUCATION */
 .education-info {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.education-info-group {
+  min-width: 150px;
+}
+
+.education-info-schoolName {
+  font-family: var(--resume-bold);
+  font-weight: bold;
+}
+
+.education-info-degree {
+  font-size: 15px;
+}
+
+/* EXPERIENCE */
+.experience-info {
     display: flex;
     gap: 18px;
     margin-bottom: 24px;
   }
   
-  .education-info-group {
+  .experience-info-group {
     min-width: 150px;
   }
   
-  .education-info-schoolName {
+  .experience-info-companyName {
     font-family: var(--resume-bold);
     font-weight: bold;
+    margin-bottom: 2px;
   }
   
-  .education-info-degree {
-    font-size: 15px;
+  .experience-info-positionTitle {
+    font-size: 15.4px;
   }
-
+  
+  .experience-info-description {
+    margin-top: 4px;
+    white-space: pre-wrap;
+  }
