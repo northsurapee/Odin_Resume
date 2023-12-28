@@ -14,7 +14,6 @@ export default function EducationForm({ initialData, onFormChange }) {
     onFormChange({ ...formData, [name]: value });
   }
 
-
   return (
     <form className="education-form">
       <InputGroup
@@ -25,7 +24,6 @@ export default function EducationForm({ initialData, onFormChange }) {
         placeholder="Enter school / university"
         value={formData.school}
         onChange={handleInputChange}
-        data-key="school"
       />
       <InputGroup
         type="text"
@@ -35,7 +33,6 @@ export default function EducationForm({ initialData, onFormChange }) {
         placeholder="Enter degree"
         value={formData.degree}
         onChange={handleInputChange}
-        data-key="degree"
       />
       <InputGroup
         type="text"
@@ -45,7 +42,6 @@ export default function EducationForm({ initialData, onFormChange }) {
         placeholder="mm/yyyy"
         value={formData.startDate}
         onChange={handleInputChange}
-        data-key="startDate"
       />
       <InputGroup
         type="text"
@@ -55,7 +51,6 @@ export default function EducationForm({ initialData, onFormChange }) {
         placeholder="mm/yyyy or present"
         value={formData.endDate}
         onChange={handleInputChange}
-        data-key="endDate"
       />
       <InputGroup
         type="text"
@@ -65,23 +60,8 @@ export default function EducationForm({ initialData, onFormChange }) {
         placeholder="City, Country"
         value={formData.location}
         onChange={handleInputChange}
-        data-key="location"
+        optional
       />
     </form>
   );
 }
-
-// EducationForm.defaultData = () => {
-//     return ({
-//         id: uniqid(),
-//         school: "",
-//         degree: "",
-//         startDate: "",
-//         endDate: "",
-//         location: ""
-//     })
-// };
-
-// EducationForm.getDisplayText = (formData) => {
-//     return formData.school;
-// };

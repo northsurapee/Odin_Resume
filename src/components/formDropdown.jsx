@@ -10,7 +10,7 @@ export default function FormDropdown({
   formIcon,
   onFormChange,
   displayProp,
-  formTemplate
+  formTemplate,
 }) {
   const [openDropDown, setOpenDropDown] = useState(false);
   const [forms, setForms] = useState(formList);
@@ -88,7 +88,10 @@ export default function FormDropdown({
                     onFormChange={handleFormChange}
                   />
                   <div className="buttons">
-                    <button className="delete" onClick={() => handleDeleteForm(formData.id)}>
+                    <button
+                      className="delete"
+                      onClick={() => handleDeleteForm(formData.id)}
+                    >
                       Delete
                     </button>
                     <button className="save" onClick={() => handleCloseForm()}>

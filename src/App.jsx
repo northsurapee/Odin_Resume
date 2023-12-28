@@ -1,20 +1,21 @@
 import { useState } from "react";
 import uniqid from "uniqid";
 import "./styles/App.css";
-// import exampleData from "./example-data";
 import PersonalForm from "./components/personalForm";
 import EducationForm from "./components/educationForm";
 import ExperienceForm from "./components/experienceForm";
 import Resume from "./components/Resume";
 import FormDropdown from "./components/formDropdown";
+import DownloadResume from "./components/downloadResume";
 
-function App() {
+export default function App() {
   const [personalInfo, setPersonalInfo] = useState({
     fullName: "Surapee Suwan",
     email: "northsurapee@gmail.com",
     phone: "+66 95 146 1000",
     address: "Bangkok, Thailand",
   });
+
   const [educationList, setEducationList] = useState([
     {
       id: uniqid(),
@@ -33,6 +34,7 @@ function App() {
       location: "Chiang Rai, Thailand",
     },
   ]);
+
   const [expList, setExpList] = useState([
     {
       id: "1a2b3c4d5e6f",
@@ -41,7 +43,8 @@ function App() {
       startDate: "07/2023",
       endDate: "09/2023",
       location: "San Francisco, USA",
-      description: "Collaborated on the development of a cutting-edge mobile application, focusing on front-end enhancements using React Native and backend improvements using Node.js."
+      description:
+        "Collaborated on the development of a cutting-edge mobile application, focusing on front-end enhancements using React Native and backend improvements using Node.js.",
     },
     {
       id: "6f5e4d3c2b1a",
@@ -50,8 +53,9 @@ function App() {
       startDate: "06/2023",
       endDate: "08/2023",
       location: "Berlin, Germany",
-      description: "Engaged in data analysis and machine learning projects, contributing to the enhancement of predictive models. Utilized Python, TensorFlow, and scikit-learn to extract insights from large datasets."
-    }
+      description:
+        "Engaged in data analysis and machine learning projects, contributing to the enhancement of predictive models. Utilized Python, TensorFlow, and scikit-learn to extract insights from large datasets.",
+    },
   ]);
 
   function handlePersonalFormChange(personalFormData) {
@@ -69,28 +73,45 @@ function App() {
   return (
     <div className="app">
       <div className="menu-container">
-        <PersonalForm onFormChange={handlePersonalFormChange} />
-        <FormDropdown 
+        <DownloadResume />
+        <PersonalForm
+          initialData={personalInfo}
+          onFormChange={handlePersonalFormChange}
+        />
+        <FormDropdown
           formList={educationList}
           formComponent={EducationForm}
           formTitle="Education"
           formIcon="fa-solid fa-graduation-cap"
           onFormChange={handleEducationFormChange}
           displayProp="school"
-          formTemplate={{school: "", degree: "", startDate: "", endDate: "", location: ""}}
+          formTemplate={{
+            school: "",
+            degree: "",
+            startDate: "",
+            endDate: "",
+            location: "",
+          }}
         />
-        <FormDropdown 
+        <FormDropdown
           formList={expList}
           formComponent={ExperienceForm}
           formTitle="Experience"
           formIcon="fa-solid fa-briefcase"
           onFormChange={handleExperienceFormChange}
           displayProp="companyName"
-          formTemplate={{companyName: "", position: "", startDate: "", endDate: "", location: "", description: "",}}
+          formTemplate={{
+            companyName: "",
+            position: "",
+            startDate: "",
+            endDate: "",
+            location: "",
+            description: "",
+          }}
         />
       </div>
       <div className="resume-container">
-        <Resume 
+        <Resume
           personalData={personalInfo}
           educationList={educationList}
           expList={expList}
@@ -99,5 +120,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

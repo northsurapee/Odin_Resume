@@ -14,14 +14,6 @@ export default function ExperienceForm({ initialData, onFormChange }) {
     onFormChange({ ...formData, [name]: value });
   }
 
-//   ExperienceForm.defaultData = () => {
-//     return ({id: uniqid(), companyName: "", position: "", startDate: "", endDate: "", location: "", description: "",});
-//   }
-
-//   ExperienceForm.getDisplayText = (formData) => {
-//     return (formData.companyName);
-//   }
-
   return (
     <form className="experience-form">
       <InputGroup
@@ -32,7 +24,6 @@ export default function ExperienceForm({ initialData, onFormChange }) {
         placeholder="Enter company"
         value={formData.companyName}
         onChange={handleInputChange}
-        data-key="companyName"
       />
       <InputGroup
         type="text"
@@ -42,7 +33,6 @@ export default function ExperienceForm({ initialData, onFormChange }) {
         placeholder="Enter position"
         value={formData.position}
         onChange={handleInputChange}
-        data-key="position"
       />
       <InputGroup
         type="text"
@@ -52,7 +42,6 @@ export default function ExperienceForm({ initialData, onFormChange }) {
         placeholder="mm/yyyy"
         value={formData.startDate}
         onChange={handleInputChange}
-        data-key="startDate"
       />
       <InputGroup
         type="text"
@@ -62,7 +51,6 @@ export default function ExperienceForm({ initialData, onFormChange }) {
         placeholder="mm/yyyy or present"
         value={formData.endDate}
         onChange={handleInputChange}
-        data-key="endDate"
       />
       <InputGroup
         type="text"
@@ -72,7 +60,6 @@ export default function ExperienceForm({ initialData, onFormChange }) {
         placeholder="City, Country"
         value={formData.location}
         onChange={handleInputChange}
-        data-key="location"
       />
       <InputGroup
         type="textarea"
@@ -82,11 +69,8 @@ export default function ExperienceForm({ initialData, onFormChange }) {
         placeholder="Enter description"
         value={formData.description}
         onChange={handleInputChange}
-        data-key="description"
         optional
       />
     </form>
   );
 }
-
-

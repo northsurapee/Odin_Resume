@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import "../styles/InputGroup.css";
-function InputGroup({
+
+export default function InputGroup({
   id,
   name,
   placeholder,
@@ -9,15 +10,12 @@ function InputGroup({
   onChange,
   value,
   optional,
-  recommended,
-  "data-key": dataKey,
 }) {
   return (
     <div className="input-group">
       <label htmlFor={id}>
         <span className="label-text">{labelText}</span>
         {optional && <span className="optional-text">optional</span>}
-        {recommended && <span className="recommended-text">recommended</span>}
       </label>
 
       {type === "textarea" ? (
@@ -27,7 +25,6 @@ function InputGroup({
           placeholder={placeholder}
           onChange={onChange}
           value={value}
-          data-key={dataKey}
         ></textarea>
       ) : (
         <input
@@ -37,11 +34,8 @@ function InputGroup({
           placeholder={placeholder}
           onChange={onChange}
           value={value}
-          data-key={dataKey}
         />
       )}
     </div>
   );
 }
-
-export default InputGroup;

@@ -3,19 +3,14 @@ import { useState } from "react";
 import InputGroup from "./inputGroup";
 import "../styles/form.css";
 
-export default function PersonalForm({ onFormChange }) {
-  const [formData, setFormData] = useState({
-    fullName: "Surapee Suwan",
-    email: "northsurapee@gmail.com",
-    phone: "+66 95 146 1000",
-    address: "Bangkok, Thailand",
-  });
+export default function PersonalForm({ initialData, onFormChange }) {
+  const [formData, setFormData] = useState(initialData);
 
   function handleInputChange(e) {
     const { name, value } = e.target;
     // Update local state
     setFormData({ ...formData, [name]: value });
-    // Notify parent or other components about the change
+    // Notify parent about the change
     onFormChange({ ...formData, [name]: value });
   }
 
@@ -30,7 +25,6 @@ export default function PersonalForm({ onFormChange }) {
         placeholder="First and last name"
         value={formData.fullName}
         onChange={handleInputChange}
-        data-key="fullName"
       />
       <InputGroup
         type="email"
@@ -40,8 +34,6 @@ export default function PersonalForm({ onFormChange }) {
         placeholder="email@example.com"
         value={formData.email}
         onChange={handleInputChange}
-        data-key="email"
-        recommended
       />
       <InputGroup
         type="tel"
@@ -51,8 +43,6 @@ export default function PersonalForm({ onFormChange }) {
         placeholder="+66 00 000 000"
         value={formData.phone}
         onChange={handleInputChange}
-        data-key="phoneNumber"
-        recommended
       />
       <InputGroup
         type="text"
@@ -62,8 +52,7 @@ export default function PersonalForm({ onFormChange }) {
         placeholder="City, Country"
         value={formData.address}
         onChange={handleInputChange}
-        data-key="address"
-        recommended
+        optional
       />
     </form>
   );

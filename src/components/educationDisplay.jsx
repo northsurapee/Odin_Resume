@@ -24,4 +24,3 @@ export default function EducationDisplay({ formDataList }) {
     </div>
   );
 }
-

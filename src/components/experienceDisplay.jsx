@@ -16,9 +16,13 @@ export default function ExperienceDisplay({ formDataList }) {
             <p>{formData.location}</p>
           </div>
           <div className="experience-info-group">
-            <p className="experience-info-companyName">{formData.companyName}</p>
+            <p className="experience-info-companyName">
+              {formData.companyName}
+            </p>
             <p className="experience-info-positionTitle">{formData.position}</p>
-            <p className="experience-info-description">{formData.description}</p>
+            <p className="experience-info-description">
+              {formData.description}
+            </p>
           </div>
         </div>
       ))}
@@ -37,4 +41,3 @@ export default function ExperienceDisplay({ formDataList }) {
 //         "Develop new features for the corporate web using React and contribute to a new product in Dime app using Go",
 //     },
 //   ]);
-
