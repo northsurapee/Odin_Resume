@@ -16,13 +16,16 @@ export default function ExperienceDisplay({ formDataList }) {
             <p>{formData.location}</p>
           </div>
           <div className="experience-info-group">
-            <p className="experience-info-companyName">{formData.companyName}</p>
+            <p className="experience-info-companyName">
+              {formData.companyName}
+            </p>
             <p className="experience-info-positionTitle">{formData.position}</p>
-            <p className="experience-info-description">{formData.description}</p>
+            <p className="experience-info-description">
+              {formData.description}
+            </p>
           </div>
         </div>
       ))}
     </div>
   );
 }
-
