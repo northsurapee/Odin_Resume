@@ -1,11 +1,9 @@
-/* WHOLE DROP DOWN */
 .dropdown {
   background-color: white;
   border: none;
   border-radius: 12px;
 }
 
-/* OPEN BUTTON */
 button.open-dropdown {
   display: flex;
   align-items: center;
@@ -25,13 +23,11 @@ button.open-dropdown h2 {
   align-items: center;
 }
 
-/* DROPDOWN CONTENT: */
 .dropdown-content {
   display: none;
   overflow: hidden;
 }
 
-/* OPEN DROPDOWN ANIMATION */
 .dropdown-content.open {
   display: flex;
   flex-direction: column;
@@ -50,7 +46,6 @@ button.open-dropdown h2 {
   }
 }
 
-/* ROTATE ICON TRANSITION */
 .chevron {
   transition: transform 0.2s ease-out;
   transform: rotate(180deg);

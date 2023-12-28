@@ -1,12 +1,9 @@
-/* CUSTOM VARIABLES */
 :root {
   --resume-header: #0e374e;
   --resume-font: "NotoSans", sans-serif;
   --resume-bold: "NotoSans-Bold", sans-serif;
   --section-resume-bg: rgba(14, 55, 78, 0.07);
 }
-
-/* WHOLE RESUME */
 
 .resume-container {
   width: 21cm;
@@ -46,7 +43,6 @@
   margin-top: 40px;
 }
 
-/* PERSONAL */
 .personal-info {
   background-color: var(--resume-header);
   color: white;
@@ -72,7 +68,6 @@
   gap: 6px;
 }
 
-/* EDUCATION */
 .education-info {
   display: flex;
   gap: 18px;
@@ -92,7 +87,6 @@
   font-size: 15px;
 }
 
-/* EXPERIENCE */
 .experience-info {
   display: flex;
   gap: 18px;
