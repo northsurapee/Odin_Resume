@@ -8,7 +8,7 @@ export default function PersonalForm({ onFormChange }) {
     fullName: "Surapee Suwan",
     email: "northsurapee@gmail.com",
     phone: "+66 95 146 1000",
-    address: "",
+    address: "Bangkok, Thailand",
   });
 
   function handleInputChange(e) {

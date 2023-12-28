@@ -22,20 +22,39 @@ button.open-dropdown h2 {
   margin-bottom: 5px;
 }
 
-/* DROPDOWN CONTENT :  */
-
+/* DROPDOWN CONTENT: */
 .dropdown-content {
-  display: none;
+    display: none;
+    overflow: hidden;
 }
 
+/* OPEN DROPDOWN ANIMATION */
 .dropdown-content.open {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideDown 1s ease-out;
 }
 
-.close {
-  display: none;
+@keyframes slideDown {
+    0% {
+      opacity: 0;
+      max-height: 0;
+    }
+    100% {
+      opacity: 1;
+      max-height: 100vh;
+    }
+}
+
+/* ROTATE ICON TRANSITION */
+.chevron {
+    transition: transform .2s ease-out;
+    transform: rotate(180deg);
+}
+
+.chevron.rotate {
+    transform: rotate(0);
 }
 
 button.create-form,
@@ -53,6 +72,10 @@ button.save {
   margin: 10px 0px;
   display: flex;
   flex-direction: column;
+  
+}
+
+.form-container div:last-child .form-button {
   border-bottom: 5px solid #f3f4f6;
 }
 
@@ -71,3 +94,4 @@ button.save {
   justify-content: center;
   gap: 10px;
 }
+

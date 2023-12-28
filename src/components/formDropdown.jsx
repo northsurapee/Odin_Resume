@@ -69,28 +69,26 @@ export default function FormDropdown({
           }`}
         ></i>
       </button>
-      <div className={`dropdown-content ${openDropDown ? "open" : ""}`}>
+      <div className={`dropdown-content ${openDropDown ? "open" : "close"}`}>
         <div className="form-container">
           {forms.map((formData) => (
             <div key={formData.id}>
-              {select !== formData.id ? (
+              {select === -1 && (
                 <button
                   className="form-button"
                   onClick={() => handleSelectForm(formData.id)}
-                > 
+                >
                   {formData[displayProp]}
                 </button>
-              ) : (
+              )}
+              {select === formData.id && (
                 <>
                   <FormComponent
                     initialData={formData}
                     onFormChange={handleFormChange}
                   />
                   <div className="buttons">
-                    <button
-                      className="delete"
-                      onClick={() => handleDeleteForm(formData.id)}
-                    >
+                    <button className="delete" onClick={() => handleDeleteForm(formData.id)}>
                       Delete
                     </button>
                     <button className="save" onClick={() => handleCloseForm()}>
@@ -102,12 +100,14 @@ export default function FormDropdown({
             </div>
           ))}
         </div>
-        <button className="create-form" onClick={handleCreateForm}>
-          <h4>
-            <i className="fa-solid fa-plus"></i>
-            {formTitle}
-          </h4>
-        </button>
+        {select === -1 && (
+          <button className="create-form" onClick={handleCreateForm}>
+            <h4>
+              <i className="fa-solid fa-plus"></i>
+              {formTitle}
+            </h4>
+          </button>
+        )}
       </div>
     </div>
   );
